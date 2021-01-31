@@ -76,7 +76,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_gray7, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *brupcmd[] = { "xbacklight", "-inc", "10", NULL };
 static const char *brdowncmd[] = { "xbacklight", "-dec", "10", NULL };
@@ -85,6 +85,7 @@ static const char *volupcmd[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", 
 static const char *voldowncmd[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%", NULL };
 static const char *qutecmd[] = { "qutebrowser", "-r", "default", NULL };
 static const char *figmacmd[] = { "figma", NULL };
+static const char *calccmd[] = { "=", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -97,6 +98,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("maim -s | xclip -selection clipboard -t image/png") },
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = qutecmd } },
 	{ MODKEY|ShiftMask,             XK_f,      spawn,          {.v = figmacmd } },
+	{ MODKEY,                       XK_c,      spawn,          {.v = calccmd } },
 	{ MODKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },

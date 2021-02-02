@@ -17,7 +17,7 @@ static const char col_gray7[]       = "#232328";
 static const char col_gray8[]       = "#34353b";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray5, col_gray1, col_gray1 },
+	[SchemeNorm] = { col_gray5, col_gray1, col_gray7 },
 	[SchemeSel]  = { col_gray4, col_gray7, col_gray8 },
 };
 
@@ -81,9 +81,9 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char *brupcmd[] = { "xbacklight", "-inc", "10", NULL };
 static const char *brdowncmd[] = { "xbacklight", "-dec", "10", NULL };
-static const char *mutecmd[] = { "pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle", NULL };
-static const char *volupcmd[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%", NULL };
-static const char *voldowncmd[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%", NULL };
+static const char *mutecmd[] = { "pamixer", "-t", NULL };
+static const char *volupcmd[] = { "pamixer", "-i", "5", NULL };
+static const char *voldowncmd[] = { "pamixer", "-d", "5", NULL };
 static const char *qutecmd[] = { "qutebrowser", "-r", "default", NULL };
 static const char *figmacmd[] = { "figma", NULL };
 static const char *calccmd[] = { "=", NULL };

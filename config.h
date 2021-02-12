@@ -88,7 +88,7 @@ static const char* mutecmd[] = { "pamixer", "-t", NULL };
 static const char* volupcmd[] = { "pamixer", "-i", "5", NULL };
 static const char* voldowncmd[] = { "pamixer", "-d", "5", NULL };
 static const char* qutecmd[] = { "qutebrowser", "-r", "default", NULL };
-static const char* figmacmd[] = { "figma", NULL };
+static const char* figmacmd[] = { "prime-run", "figma", NULL };
 static const char* calccmd[] = { "=", NULL };
 static const char* zathuracmd[] = { "zathura", NULL };
 

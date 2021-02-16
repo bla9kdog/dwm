@@ -5,8 +5,9 @@ static const unsigned int borderpx = 1; /* border pixel of windows */
 static const unsigned int snap = 32;    /* snap pixel */
 static const int showbar = 1;           /* 0 means no bar */
 static const int topbar = 1;            /* 0 means bottom bar */
-static const char* fonts[] = { "JetBrainsMono Nerd Font Mono:size=9" };
-static const char dmenufont[] = "JetBrainsmono Nerd Font Mono:size=9";
+static const char* fonts[] = { "JetBrainsMono Nerd Font Mono:size=9",
+                               "Noto Color Emoji:pixelsize=24:antialias=true:autohint=true" };
+static const char dmenufont[] = "JetBrainsMono Nerd Font Mono:size=9";
 static const char col_gray1[] = "#1f1f24";
 static const char col_gray2[] = "#43454b";
 static const char col_gray3[] = "#aeb7c0";

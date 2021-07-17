@@ -88,8 +88,7 @@ static const char* brdowncmd[] = { "xbacklight", "-dec", "10", NULL };
 static const char* mutecmd[] = { "pamixer", "-t", NULL };
 static const char* volupcmd[] = { "pamixer", "-i", "5", NULL };
 static const char* voldowncmd[] = { "pamixer", "-d", "5", NULL };
-static const char* qutecmd[] = { "qutebrowser", "-r", "default", NULL };
-static const char* figmacmd[] = { "prime-run", "figma", NULL };
+static const char* qutecmd[] = { "qutebrowser", NULL };
 static const char* calccmd[] = { "=", NULL };
 static const char* zathuracmd[] = { "zathura", NULL };
 
@@ -103,7 +102,6 @@ static Key keys[] = {
     { MODKEY | ShiftMask, XK_r, spawn, SHCMD("redshift -l 44:20") },
     { MODKEY | ShiftMask, XK_s, spawn, SHCMD("maim -s | xclip -selection clipboard -t image/png") },
     { MODKEY | ShiftMask, XK_w, spawn, { .v = qutecmd } },
-    { MODKEY | ShiftMask, XK_f, spawn, { .v = figmacmd } },
     { MODKEY | ShiftMask, XK_space, spawn, { .v = calccmd } },
     { MODKEY | ShiftMask, XK_z, spawn, { .v = zathuracmd } },
     { MODKEY, XK_space, spawn, { .v = dmenucmd } },

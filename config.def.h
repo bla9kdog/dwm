@@ -15,11 +15,11 @@ static const char col_gray4[] = "#ffffff";
 static const char col_gray5[] = "#838991";
 static const char col_gray6[] = "#28282d";
 static const char col_gray7[] = "#232328";
-static const char col_gray8[] = "#34353b";
+/* static const char col_gray8[] = "#34353b"; */
 static const char* colors[][3] = {
     /*               fg         bg         border   */
     [SchemeNorm] = { col_gray5, col_gray1, col_gray7 },
-    [SchemeSel] = { col_gray4, col_gray7, col_gray8 },
+    [SchemeSel] = { col_gray4, col_gray7, col_gray2 },
 };
 
 /* tagging */
@@ -48,6 +48,7 @@ static const Rule rules[] = {
 	 */
     /* class      instance    title       tags mask     iscentered   isfloating   monitor */
     { "Gimp", NULL, NULL, 0, 0, 1, -1 },
+    { "mpv",      NULL,	  NULL,	      0,	    1,		 -1 },
     { "Firefox", NULL, NULL, 1 << 8, 0, 0, -1 },
 };
 
@@ -91,6 +92,7 @@ static const char* voldowncmd[] = { "pamixer", "-d", "5", NULL };
 static const char* qutecmd[] = { "qutebrowser", NULL };
 static const char* calccmd[] = { "=", NULL };
 static const char* zathuracmd[] = { "zathura", NULL };
+static const char* figmacmd[] = { "figma", NULL };
 
 static Key keys[] = {
     /* modifier                     key        function        argument */
@@ -104,6 +106,7 @@ static Key keys[] = {
     { MODKEY | ShiftMask, XK_w, spawn, { .v = qutecmd } },
     { MODKEY | ShiftMask, XK_space, spawn, { .v = calccmd } },
     { MODKEY | ShiftMask, XK_z, spawn, { .v = zathuracmd } },
+    { MODKEY | ShiftMask, XK_f, spawn, { .v = figmacmd} },
     { MODKEY, XK_space, spawn, { .v = dmenucmd } },
     { MODKEY | ShiftMask, XK_Return, spawn, { .v = termcmd } },
     { MODKEY, XK_b, togglebar, { 0 } },
